@@ -50,8 +50,8 @@ services:
       - CAMUNDA_OPERATE_IDENTITY_CLIENTID=operate
       - CAMUNDA_OPERATE_IDENTITY_CLIENTSECRET=XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
       - CAMUNDA_OPERATE_IDENTITY_AUDIENCE=operate-api
-      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://18.116.118.53:18080/auth/realms/camunda-platform
-      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://18.116.118.53:18080/auth/realms/camunda-platform/protocol/openid-connect/certs
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://localhost:18080/auth/realms/camunda-platform
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://localhost:18080/auth/realms/camunda-platform/protocol/openid-connect/certs
     networks:
       - camunda-platform
       - identity-network
@@ -77,8 +77,8 @@ services:
       - CAMUNDA_TASKLIST_IDENTITY_CLIENTID=tasklist
       - CAMUNDA_TASKLIST_IDENTITY_CLIENTSECRET=XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
       - CAMUNDA_TASKLIST_IDENTITY_AUDIENCE=tasklist-api
-      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://18.116.118.53:18080/auth/realms/camunda-platform
-      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://18.116.118.53:18080/auth/realms/camunda-platform/protocol/openid-connect/certs
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://localhost:18080/auth/realms/camunda-platform
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://localhost:18080/auth/realms/camunda-platform/protocol/openid-connect/certs
     networks:
       - camunda-platform
       - identity-network
@@ -138,11 +138,11 @@ services:
       KEYCLOAK_URL: http://keycloak:8080/auth
       IDENTITY_AUTH_PROVIDER_BACKEND_URL: http://keycloak:8080/auth/realms/camunda-platform
       KEYCLOAK_INIT_OPERATE_SECRET: XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
-      KEYCLOAK_INIT_OPERATE_ROOT_URL: http://localhost:8081
+      KEYCLOAK_INIT_OPERATE_ROOT_URL: http://52.66.208.2:8081
       KEYCLOAK_INIT_TASKLIST_SECRET: XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
-      KEYCLOAK_INIT_TASKLIST_ROOT_URL: http://localhost:8082
+      KEYCLOAK_INIT_TASKLIST_ROOT_URL: http://52.66.208.2:8082
       KEYCLOAK_INIT_OPTIMIZE_SECRET: XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
-      KEYCLOAK_INIT_OPTIMIZE_ROOT_URL: http://localhost:8083
+      KEYCLOAK_INIT_OPTIMIZE_ROOT_URL: http://52.66.208.2:8083
       KEYCLOAK_INIT_WEBMODELER_ROOT_URL: http://localhost:8070   
       KEYCLOAK_USERS_0_USERNAME: "demo"
       KEYCLOAK_USERS_0_PASSWORD: "demo"
