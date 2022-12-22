@@ -171,6 +171,8 @@ services:
   postgres: # https://hub.docker.com/_/postgres
     container_name: postgres
     image: postgres:${POSTGRES_VERSION:-14.5-alpine}
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_DB: bitnami_keycloak
       POSTGRES_USER: bn_keycloak
