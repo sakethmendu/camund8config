@@ -45,7 +45,7 @@ services:
       # For more information regarding configuration with Identity see:
       # https://docs.camunda.io/docs/self-managed/operate-deployment/authentication/#identity
       - SPRING_PROFILES_ACTIVE=identity-auth
-      - CAMUNDA_OPERATE_IDENTITY_ISSUER_URL=http://18.116.118.53:18080/auth/realms/camunda-platform
+      - CAMUNDA_OPERATE_IDENTITY_ISSUER_URL=http://hsbc-camunda-poc-lb-644124790.us-east-2.elb.amazonaws.com/auth/realms/camunda-platform
       - CAMUNDA_OPERATE_IDENTITY_ISSUER_BACKEND_URL=http://keycloak:8080/auth/realms/camunda-platform
       - CAMUNDA_OPERATE_IDENTITY_CLIENTID=operate
       - CAMUNDA_OPERATE_IDENTITY_CLIENTSECRET=XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
@@ -72,7 +72,7 @@ services:
       # For more information regarding configuration with Identity see:
       # https://docs.camunda.io/docs/self-managed/tasklist-deployment/authentication/#identity
       - SPRING_PROFILES_ACTIVE=identity-auth
-      - CAMUNDA_TASKLIST_IDENTITY_ISSUER_URL=http://18.116.118.53:18080/auth/realms/camunda-platform
+      - CAMUNDA_TASKLIST_IDENTITY_ISSUER_URL=http://hsbc-camunda-poc-lb-644124790.us-east-2.elb.amazonaws.com/auth/realms/camunda-platform
       - CAMUNDA_TASKLIST_IDENTITY_ISSUER_BACKEND_URL=http://keycloak:8080/auth/realms/camunda-platform
       - CAMUNDA_TASKLIST_IDENTITY_CLIENTID=tasklist
       - CAMUNDA_TASKLIST_IDENTITY_CLIENTSECRET=XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
@@ -110,7 +110,7 @@ services:
       - SPRING_PROFILES_ACTIVE=ccsm
       - CAMUNDA_OPTIMIZE_ZEEBE_ENABLED=true
       - CAMUNDA_OPTIMIZE_ENTERPRISE=false
-      - CAMUNDA_OPTIMIZE_IDENTITY_ISSUER_URL=http://18.116.118.53:18080/auth/realms/camunda-platform
+      - CAMUNDA_OPTIMIZE_IDENTITY_ISSUER_URL=http://hsbc-camunda-poc-lb-644124790.us-east-2.elb.amazonaws.com/auth/realms/camunda-platform
       - CAMUNDA_OPTIMIZE_IDENTITY_ISSUER_BACKEND_URL=http://keycloak:8080/auth/realms/camunda-platform
       - CAMUNDA_OPTIMIZE_IDENTITY_CLIENTID=optimize
       - CAMUNDA_OPTIMIZE_IDENTITY_CLIENTSECRET=XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
